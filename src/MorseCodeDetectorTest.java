@@ -9,5 +9,6 @@ class MorseCodeDetectorTest {
         assertEquals(MorseCodeDetector.decode(".... . -.--   .--- ..- -.. ."), "HEY JUDE");
         assertEquals(MorseCodeDetector.decode(" .... . .-.. .-.. ---"), "HELLO");
         assertEquals(MorseCodeDetector.decode(" .  ."), "E E");
+        assertNull(MorseCodeDetector.decode(".---.."));
     }
 }

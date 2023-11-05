@@ -14,6 +14,13 @@ public class MorseCodeDetector {
                 else {
                     firstWord = false;
                 }
+
+                String decodedWord = decodeWord(word);
+
+                if (decodedWord == null) {
+                    return null;
+                }
+
                 decodedPhrase.append(decodeWord(word));
             }
         }
@@ -28,7 +35,13 @@ public class MorseCodeDetector {
 
         for (String letter: morseArray) {
             if (!letter.isEmpty()) {
-                decodedWord.append(MorseCode.get(letter));
+                Character decodedLetter = MorseCode.get(letter);
+
+                if (decodedLetter == null) {
+                    return null;
+                }
+
+                decodedWord.append(decodedLetter);
             }
         }
 
