@@ -11,10 +11,10 @@ public class MorseCodeDetector {
             if (word.isEmpty()) {
                 if (!previousIsEmpty) {
                     previousIsEmpty = true;
-                    decodedPhrase.append(" ");
                 }
                 else {
                     previousIsEmpty = false;
+                    decodedPhrase.append(" ");
                 }
             }
             else {

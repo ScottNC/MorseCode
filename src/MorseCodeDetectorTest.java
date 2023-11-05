@@ -7,5 +7,6 @@ class MorseCodeDetectorTest {
     @Test
     void decode() {
         assertEquals(MorseCodeDetector.decode(".... . -.--   .--- ..- -.. ."), "HEY JUDE");
+        assertEquals(MorseCodeDetector.decode(" .... . .-.. .-.. ---"), "HELLO");
     }
 }
